@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "lib":["DOM", "ES2015"],
+        "strictNullChecks": true,
+        "strict": true,
+        "outDir": "compiledCode",
+        "rootDir": "src",
+    }
+}
