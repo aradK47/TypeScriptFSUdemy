@@ -8,11 +8,11 @@ class DbTest{
     public userDBAccess: UserDBAccess = new UserDBAccess();
 }
 
-// new DbTest().dbAccess.putUserCredentials({
-//     username:'user3',
-//     password:'password3',
-//     accessRights:[1,2,3]
-// });
+new DbTest().dbAccess.putUserCredentials({
+    username:'user3',
+    password:'password3',
+    accessRights:[0,1,2,3]
+});
 
 new DbTest().userDBAccess.putUser({
     age:30,

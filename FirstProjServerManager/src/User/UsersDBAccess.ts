@@ -10,6 +10,9 @@ export class UserDBAccess {
     }
 
     public async putUser(user: User) {
+        if (!user.id) {
+            user.id = this.generateUserId();
+        }
         return new Promise((resolve, reject) => {
             this.nedb.insert(user, (err: Error | null) => {
                 if (err) {
@@ -21,7 +24,7 @@ export class UserDBAccess {
         })
     }
 
-    public async getUserById(userId: string): Promise<User | undefined> {
+    public async getUserById(userId: string): Promise<User | undefined> {        
         return new Promise((resolve, reject) => {
             this.nedb.find({ id: userId }, (err: Error, docs: any[])=>{
                 if (err) {
@@ -35,5 +38,9 @@ export class UserDBAccess {
                 }
             })
         })
+    }
+
+    private generateUserId(){
+        return Math.random().toString(36).slice(2);
     }
 }

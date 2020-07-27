@@ -2,11 +2,23 @@ POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-    "username": "user1",
-    "password": "password1"
+    "username": "user3",
+    "password": "password3"
 }
 ###
 
 
 GET http://localhost:8080/users?id=mapleaple
-Authorization: asawasww
+Authorization: y0z0sjoup7f
+
+###
+PUT http://localhost:8080/users
+Authorization: cawz7dzyid
+Content-Type: 'application/json
+
+{
+    "name": "NewUsername1",
+    "age": "NewUserage",
+    "email":"asd@asd.com",
+    "workingPosition": "Unemployed"
+}
