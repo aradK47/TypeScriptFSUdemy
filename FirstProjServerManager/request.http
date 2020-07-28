@@ -10,6 +10,10 @@ Content-Type: application/json
 
 GET http://localhost:8080/users?id=mapleaple
 Authorization: y0z0sjoup7f
+###
+
+GET http://localhost:8080/users?name=sh
+Authorization: u2tzuj2rdqm
 
 ###
 PUT http://localhost:8080/users
@@ -22,3 +26,7 @@ Content-Type: 'application/json
     "email":"asd@asd.com",
     "workingPosition": "Unemployed"
 }
+
+### 
+DELETE http://localhost:8080/users?id=mapleaple
+Authorization: yvco4i5u5
